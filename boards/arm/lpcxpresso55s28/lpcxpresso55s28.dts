@@ -99,6 +99,10 @@
 	status = "okay";
 };
 
+zephyr_udc0: &usbhs {
+	status = "okay";
+};
+
 &flash0 {
 	/*
 	 * LPC flash controller requires minimum 512 byte write to flash,

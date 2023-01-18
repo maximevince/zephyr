@@ -42,6 +42,7 @@ config SOC_LPC55S28
 	select HAS_MCUX_IAP
 	select HAS_MCUX_LPADC
 	select HAS_MCUX_LPC_DMA
+	select HAS_MCUX_USB_LPCIP3511
 	select HAS_MCUX_RNG
 
 config SOC_LPC55S36
