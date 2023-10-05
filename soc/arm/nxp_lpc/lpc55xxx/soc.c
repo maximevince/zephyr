@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#pragma GCC push_options
+#pragma GCC optimize ("Os")
+
+
 /**
  * @file
  * @brief System/hardware module for nxp_lpc55s69 platform
@@ -328,3 +332,5 @@ int _second_core_init(const struct device *arg)
 SYS_INIT(_second_core_init, PRE_KERNEL_2, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
 
 #endif /*defined(CONFIG_SECOND_CORE_MCUX) && defined(CONFIG_SOC_LPC55S69_CPU0)*/
+
+#pragma GCC pop_options

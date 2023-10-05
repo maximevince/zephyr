@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#pragma GCC push_options
+#pragma GCC optimize ("Os")
+
+
 #include <zephyr/drivers/pinctrl.h>
 
 int pinctrl_lookup_state(const struct pinctrl_dev_config *config, uint8_t id,
@@ -53,3 +57,5 @@ int pinctrl_update_states(struct pinctrl_dev_config *config,
 	return 0;
 }
 #endif /* CONFIG_PINCTRL_DYNAMIC */
+
+#pragma GCC pop_options

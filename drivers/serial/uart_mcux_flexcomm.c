@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#pragma GCC push_options
+#pragma GCC optimize ("Os")
+
+
 #define DT_DRV_COMPAT nxp_lpc_usart
 
 /** @file
@@ -503,3 +507,5 @@ static const struct mcux_flexcomm_config mcux_flexcomm_##n##_config = {	\
 	UART_MCUX_FLEXCOMM_INIT_CFG(n);
 
 DT_INST_FOREACH_STATUS_OKAY(UART_MCUX_FLEXCOMM_INIT)
+
+#pragma GCC pop_options

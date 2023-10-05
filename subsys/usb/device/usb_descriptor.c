@@ -7,6 +7,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#pragma GCC push_options
+#pragma GCC optimize ("Os")
+
+
 #include <string.h>
 #include <zephyr/sys/byteorder.h>
 #include <zephyr/sys/__assert.h>
@@ -547,3 +551,5 @@ struct usb_dev_data *usb_get_dev_data_by_ep(sys_slist_t *list, uint8_t ep)
 
 	return NULL;
 }
+
+#pragma GCC pop_options

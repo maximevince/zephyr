@@ -5,6 +5,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#pragma GCC push_options
+#pragma GCC optimize ("Os")
+
+
 #include <zephyr/kernel.h>
 #include <zephyr/usb/usb_device.h>
 #include <zephyr/logging/log.h>
@@ -351,3 +355,5 @@ int usb_transfer_init(void)
 
 	return 0;
 }
+
+#pragma GCC pop_options

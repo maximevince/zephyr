@@ -5,6 +5,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#pragma GCC push_options
+#pragma GCC optimize ("Os")
+
 #define DT_DRV_COMPAT nxp_mcux_usbd
 
 #include <soc.h>
@@ -897,3 +900,5 @@ static int usb_mcux_init(const struct device *dev)
 }
 
 SYS_INIT(usb_mcux_init, POST_KERNEL, CONFIG_KERNEL_INIT_PRIORITY_DEVICE);
+
+#pragma GCC pop_options

@@ -30,6 +30,10 @@
  *
  ******************************************************************************/
 
+#pragma GCC push_options
+#pragma GCC optimize ("Os")
+
+
 /**
  * @file
  * @brief CDC ACM device class driver
@@ -1204,3 +1208,5 @@ static const struct uart_driver_api cdc_acm_driver_api = {
 		&cdc_acm_driver_api);
 
 DT_INST_FOREACH_STATUS_OKAY(CDC_ACM_DT_DEVICE_DEFINE);
+
+#pragma GCC pop_options

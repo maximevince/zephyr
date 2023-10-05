@@ -3,6 +3,11 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  */
+
+#pragma GCC push_options
+#pragma GCC optimize ("Os")
+
+
 #include <zephyr/device.h>
 #include <zephyr/drivers/timer/system_timer.h>
 #include <zephyr/sys_clock.h>
@@ -284,3 +289,5 @@ static int sys_clock_driver_init(const struct device *dev)
 
 SYS_INIT(sys_clock_driver_init, PRE_KERNEL_2,
 	 CONFIG_SYSTEM_CLOCK_INIT_PRIORITY);
+
+#pragma GCC pop_options

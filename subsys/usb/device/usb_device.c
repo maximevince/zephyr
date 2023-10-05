@@ -27,6 +27,9 @@
  *  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#pragma GCC push_options
+#pragma GCC optimize ("Os")
+
 /**
  * @file
  * @brief USB device core layer
@@ -1711,3 +1714,5 @@ static int usb_device_init(const struct device *dev)
 }
 
 SYS_INIT(usb_device_init, POST_KERNEL, CONFIG_APPLICATION_INIT_PRIORITY);
+
+#pragma GCC pop_options
