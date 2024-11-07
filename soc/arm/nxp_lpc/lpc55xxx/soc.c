@@ -11,6 +11,9 @@
  * hardware for the nxp_lpc55s69 platform.
  */
 
+#pragma GCC push_options
+#pragma GCC optimize("O1") // O3 not working!
+
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/init.h>
@@ -459,3 +462,5 @@ int _second_core_init(void)
 SYS_INIT(_second_core_init, PRE_KERNEL_2, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
 
 #endif /*defined(CONFIG_SECOND_CORE_MCUX) && defined(CONFIG_SOC_LPC55S69_CPU0)*/
+
+#pragma GCC pop_options
