@@ -10,6 +10,9 @@
 #include <zephyr/devicetree.h>
 #include "usb.h"
 
+#define USB_DEVICE_CONFIG_LOW_POWER_MODE (1U)
+#define USB_DEVICE_CONFIG_REMOTE_WAKEUP (1U)
+
 /******************************************************************************
  * Definitions
  *****************************************************************************/
